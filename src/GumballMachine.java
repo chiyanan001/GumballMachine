@@ -75,7 +75,21 @@ public class GumballMachine {
     }
 	     }
 	
-	
+	public String toString(){
+		String status = "Gumball Machine";
+		if(state == HAS_QUARTER){
+			status = status+"\n status : HAS_QUARTER";
+		} else if(state == NO_QUARTER){
+		    status = status+"\n status : NO_QUARTER";
+		} else if(state == SOLD){
+			status = status+"\n status :  SOLD";
+        } else if(state == SOLD_OUT){
+        	status = status+"\n status :  SOLD_OUT";
+        }
+		status = status+"\n status : "+this.count;
+		
+		return status;
+	}
 	
 	
 }
